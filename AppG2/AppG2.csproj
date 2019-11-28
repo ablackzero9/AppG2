@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0-preview2-19525-03\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0-preview2-19525-03\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CDAF863F-D81B-4804-B992-B67247B8EB29}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AppG2</RootNamespace>
+    <AssemblyName>AppG2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0-preview2-19525-03\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0-preview2-19525-03\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\ContactService.cs" />
+    <Compile Include="Controller\LoginService.cs" />
+    <Compile Include="Controller\StudentService.cs" />
+    <Compile Include="Model\AppG2Context.cs" />
+    <Compile Include="Model\Contact.cs" />
+    <Compile Include="Model\Login.cs" />
+    <Compile Include="Model\LoginContext.cs" />
+    <Compile Include="View\frmContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmContact.Designer.cs">
+      <DependentUpon>frmContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmContactInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmContactInfo.Designer.cs">
+      <DependentUpon>frmContactInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmQuaTrinhHocTapChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmQuaTrinhHocTapChiTiet.Designer.cs">
+      <DependentUpon>frmQuaTrinhHocTapChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmThongTinSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmThongTinSinhVien.Designer.cs">
+      <DependentUpon>frmThongTinSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTinSinhVien2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTinSinhVien2.Designer.cs">
+      <DependentUpon>frmThongTinSinhVien2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTinhToanCoBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTinhToanCoBan.Designer.cs">
+      <DependentUpon>frmTinhToanCoBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\HistoryLearning.cs" />
+    <Compile Include="Model\Student.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\frmContact.resx">
+      <DependentUpon>frmContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmContactInfo.resx">
+      <DependentUpon>frmContactInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmQuaTrinhHocTapChiTiet.resx">
+      <DependentUpon>frmQuaTrinhHocTapChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmThongTinSinhVien.resx">
+      <DependentUpon>frmThongTinSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinSinhVien2.resx">
+      <DependentUpon>frmThongTinSinhVien2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTinhToanCoBan.resx">
+      <DependentUpon>frmTinhToanCoBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\67730575_10156446822733715_2485965025550794752_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\65391227_2329240620726686_7304304825649332224_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_plus-24_103172.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_11_-_Valid_1815560.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Data\contact.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\learninghistory.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\student.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\user.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\add.png" />
+    <Content Include="Resources\avatar.png" />
+    <Content Include="Resources\deleete2.png" />
+    <Content Include="Resources\delete.png" />
+    <Content Include="Resources\edit.png" />
+    <Content Include="Resources\iconfinder_8_2698685.png" />
+    <Content Include="Resources\Koala.jpg" />
+    <Content Include="Resources\update.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0-preview2-19525-03\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0-preview2-19525-03\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0-preview2-19525-03\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0-preview2-19525-03\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0-preview2-19525-03\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0-preview2-19525-03\build\EntityFramework.targets')" />
+</Project>
