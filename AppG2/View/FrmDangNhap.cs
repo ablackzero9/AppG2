@@ -32,8 +32,8 @@ namespace AppG2.View
         private void btnlogin_Click(object sender, EventArgs e)
         {
             /*var newLoginListNoSort = LoginService.GetUser(pathUserDataFile);
-            List<Login> newLoginList = newLoginListNoSort.OrderBy(x => x.Account).ToList();
-            if(String.Compare(txtac.Text, , false)*/
+            List<Login> newLoginList = newLoginListNoSort.OrderBy(x => x.Account).ToList();*/
+
             this.Hide();
             var f = new frmContact();
             f.ShowDialog();
